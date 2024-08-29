@@ -35,4 +35,12 @@ extension UIView {
         layer.cornerCurve = .continuous
         clipsToBounds = true
     }
+
+    /// Add subviews
+    /// - Parameter views: A variadic function to add next subview
+    public func addSubviews(_ views: UIView...) {
+        for view in views {
+            addSubview(view)
+        }
+    }
 }
