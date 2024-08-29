@@ -1,4 +1,4 @@
-// swift-tools-version: 5.7
+// swift-tools-version:5.7
 import PackageDescription
 
 let package = Package(
@@ -16,8 +16,7 @@ let package = Package(
         // Define the module target
         .target(
             name: "ArcKit",
-            path: "Sources",
-            sources: ["UIView+shadow"]  // Pointing to the UIView+shadow folder within Sources
+            path: "Sources"
         ),
         // Define the test target
         .testTarget(
