@@ -1,6 +1,4 @@
-// swift-tools-version: 5.10
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
+// swift-tools-version: 5.7
 import PackageDescription
 
 let package = Package(
@@ -9,21 +7,23 @@ let package = Package(
         .iOS(.v13)
     ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
+        // Define the library product that this package produces
         .library(
             name: "ArcKit",
             targets: ["ArcKit"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
+        // Define the module target
         .target(
             name: "ArcKit",
             path: "Sources",
-            sources: ["UIView+shadow"]
+            sources: ["UIView+shadow"]  // Pointing to the UIView+shadow folder within Sources
         ),
+        // Define the test target
         .testTarget(
             name: "ArcKitTests",
-            dependencies: ["ArcKit"]),
+            dependencies: ["ArcKit"],
+            path: "Tests"
+        ),
     ]
 )
