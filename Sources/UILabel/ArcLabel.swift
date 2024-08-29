@@ -8,7 +8,7 @@
 import UIKit
 
 open class ArcLabel: UILabel {
-    init(
+    public init(
         text: String,
         textColor: UIColor = .label,
         alignment: NSTextAlignment,
